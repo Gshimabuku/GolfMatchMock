@@ -49,7 +49,7 @@ html {
     transition: all .12s, border-color .08s;
 }
 
-input[type="checkbox"]:checked+label:before {
+.menu-checkbox-label:checked:before {
     width: 10px;
     top: -5px;
     left: 5px;
@@ -59,10 +59,6 @@ input[type="checkbox"]:checked+label:before {
     border-left-color: transparent;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-}
-
-.member-all {
-    display: flex;
 }
 
 .member {
@@ -88,8 +84,8 @@ h2 {
 }
 
 .boxes {
-    width: 50%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .menu {
@@ -129,8 +125,8 @@ h2 {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+        height: 30px;
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -151,4 +147,24 @@ h2 {
 
 .hole {
     Text-align: center;
+}
+.hole-score {
+    font-size: 20px;
+    width: 20px;
+}
+
+.score-fluctuation {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 3px;
 }
