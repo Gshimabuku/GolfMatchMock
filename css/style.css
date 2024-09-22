@@ -1,12 +1,72 @@
 body {
-    background-color: #282c34;
-    color: #ffffff;
+    background-color: #ffffff;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+/*Page styles*/
+html {
+    height: 100%;
+}
+
+/*Checkboxes styles*/
+.menu-checkbox {
+    display: none;
+}
+
+.menu-checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.menu-checkbox-label:last-child {
+    margin-bottom: 0;
+}
+
+.menu-checkbox-label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #1500ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked+label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.member-all {
+    display: flex;
+}
+
+.member {
+    margin: 10px;
 }
 
 .container {
@@ -27,24 +87,68 @@ h2 {
     color: #333;
 }
 
+.boxes {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .menu {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
-.menu li {
-    margin: 15px 0;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #007BFF;
-    padding: 10px 15px;
+.menu-start-button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 30px;
+    margin: 20px 0;
+    font-size: 1.5em;
+    cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.menu a:hover {
-    background-color: #0056b3;
+.menu-start-button:hover {
+    background-color: #21a1f1;
+}
+
+.hole-change {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hole-column {
+    display: flex;
+}
+
+.hole-button {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hole-button:hover {
+    background-color: #e0a800;
+}
+
+.hole-button:active {
+    background-color: #d39e00;
+}
+
+.hole {
+    Text-align: center;
 }

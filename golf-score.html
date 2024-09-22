@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GOLF MATCH</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.7.1.slim.min.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="member-all">
+            <div class="member">
+                <p>メンバー1</p>
+                <input type="text">
+            </div>
+            <div class="member">
+                <p>メンバー2</p>
+                <input type="text">
+            </div>
+            <div class="member">
+                <p>メンバー3</p>
+                <input type="text">
+            </div>
+            <div class="member">
+                <p>メンバー4</p>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="boxes">
+            <input class="menu-checkbox" type="checkbox" id="checkbox-1">
+            <label class="menu-checkbox-label" for="checkbox-1">ラスベガス</label>
+
+            <input class="menu-checkbox" type="checkbox" id="checkbox-2">
+            <label class="menu-checkbox-label" for="checkbox-2">ダブルペリア</label>
+
+            <input class="menu-checkbox" type="checkbox" id="checkbox-3">
+            <label class="menu-checkbox-label" for="checkbox-3">ポイントターニー</label>
+
+            <input class="menu-checkbox" type="checkbox" id="checkbox-4">
+            <label class="menu-checkbox-label" for="checkbox-4">オリンピック</label>
+
+            <input class="menu-checkbox" type="checkbox" id="checkbox-5">
+            <label class="menu-checkbox-label" for="checkbox-5">ピンポンパン</label>
+
+            <input class="menu-checkbox" type="checkbox" id="checkbox-6">
+            <label class="menu-checkbox-label" for="checkbox-6">ヘビ（雪だるま）</label>
+        </div>
+
+        <button class="menu-start-button" onclick="scoreStart();">スタート</button>
+    </div>
+
+    <div class="score-hole" style="display: none;">
+        <div class="hole-change">
+            <div class="hole-column">
+                <button class="hole-button" value="1">1</button>
+                <button class="hole-button" value="2">2</button>
+                <button class="hole-button" value="3">3</button>
+                <button class="hole-button" value="4">4</button>
+                <button class="hole-button" value="5">5</button>
+                <button class="hole-button" value="6">6</button>
+                <button class="hole-button" value="7">7</button>
+                <button class="hole-button" value="8">8</button>
+                <button class="hole-button" value="9">9</button>
+            </div>
+            <div class="hole-column">
+                <button class="hole-button" value="10">10</button>
+                <button class="hole-button" value="11">11</button>
+                <button class="hole-button" value="12">12</button>
+                <button class="hole-button" value="13">13</button>
+                <button class="hole-button" value="14">14</button>
+                <button class="hole-button" value="15">15</button>
+                <button class="hole-button" value="16">16</button>
+                <button class="hole-button" value="17">17</button>
+                <button class="hole-button" value="18">18</button>
+            </div>
+        </div>
+
+        <div class="hole hole-1" style="display: none;">
+            <div>
+                <label class="name1" for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label class="name2" for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label class="name3" for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label class="name4" for="name"></label>
+                <input type="text" id="name" name="name">
+            </div>
+        </div>
+
+        <div class="hole hole-2" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-3" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-4" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-5" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-6" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-7" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-8" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-9" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-10" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-11" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-12" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-13" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-14" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-15" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-16" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-17" style="display: none;">
+            <input type="text">
+        </div>
+
+        <div class="hole hole-18" style="display: none;">
+            <input type="text">
+        </div>
+    </div>
+
+    <script>
+        function scoreStart() {
+            $('.menu').hide();
+            $('.score-hole').show();
+            $('.hole-1').show();
+        }
+
+
+    </script>
+</body>
+
+</html>
