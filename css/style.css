@@ -11,6 +11,7 @@ body {
 /*Page styles*/
 html {
     height: 100%;
+    touch-action: manipulation;
 }
 
 /*Checkboxes styles*/
@@ -49,7 +50,7 @@ html {
     transition: all .12s, border-color .08s;
 }
 
-.menu-checkbox-label:checked:before {
+.menu-checkbox:checked+label:before {
     width: 10px;
     top: -5px;
     left: 5px;
@@ -121,12 +122,11 @@ h2 {
 }
 
 .hole-button {
-    background-color: #ffc107;
-    color: white;
-    border: none;
+    background-color: #00ff00;
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     width: 30px;
-        height: 30px;
+    height: 30px;
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -148,13 +148,13 @@ h2 {
 .hole {
     Text-align: center;
 }
-.hole-score {
+.hole-text {
     font-size: 20px;
     width: 20px;
 }
 
 .score-fluctuation {
-    background-color: #ffc107;
+    background-color: #00aaff;
     color: white;
     border: none;
     border-radius: 50%;
@@ -162,6 +162,21 @@ h2 {
     height: 20px;
     font-size: 16px;
     font-weight: bold;
+}
+
+.patt-fluctuation {
+    background-color: #ffaa00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table {
+    margin: auto;
 }
 
 td,

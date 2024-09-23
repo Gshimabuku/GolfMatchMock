@@ -94,53 +94,38 @@
                     <th>PPP</th>
                 </tr>
                 <!-- Player1 -->
-                <tr class="table-player1">
-                    <td rowspan="2"><label class="name1">Player1</label></td>
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="score-menber-1" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                    <td rowspan="2"><select class="olympic-select" name="olympic-select-1"
-                            id="olympic-select-1"></select></td>
-                    <td rowspan="2"></td>
-                    <td rowspan="2"></td>
-                </tr>
-                <tr class="table-player1">
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="patt-menber-1" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                </tr>
-                <!-- Player2 -->
-                <tr class="table-player2">
-                    <td rowspan="2"><label class="name2">Player2</label></td>
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="score-member-2" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                    <td rowspan="2"><select class="olympic-select" name="olympic-select-2"
-                            id="olympic-select-2"></select></td>
-                    <td rowspan="2"></td>
-                    <td rowspan="2"></td>
-                </tr>
-                <tr class="table-player2">
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="patt-member-2" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                </tr>
-                <!-- Player3 -->
-                <tr class="table-player3">
-                    <td rowspan="2"><label class="name2">Player3</label></td>
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="score-member-3" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                    <td rowspan="2"><select class="olympic-select" name="olympic-select-3"
-                            id="olympic-select-2"></select></td>
-                    <td rowspan="2"></td>
-                    <td rowspan="2"></td>
-                </tr>
-                <tr class="table-player2">
-                    <td><button class="score-fluctuation score-fluctuation-plus">+</button></td>
-                    <td><input type="text" class="hole-score" id="patt-member-2" value="4"></td>
-                    <td><button class="score-fluctuation score-fluctuation-minus">-</button></td>
-                </tr>
+                <div>
+                    <tr class="table-player1">
+                        <td rowspan="2"><label class="name1">Player1</label></td>
+                        <td><button class="score-fluctuation fluctuation-score-plus">+</button></td>
+                        <td><input type="text" class="hole-text hole-score" id="score-menber-1" value="4"></td>
+                        <td><button class="score-fluctuation fluctuation-score-minus">-</button></td>
+                        <td rowspan="2">
+                            <select class="olympic-select" name="olympic-select-1" id="olympic-select-1">
+                                <option value="0">なし</option>
+                                <option value="1">金</option>
+                                <option value="2">銀</option>
+                                <option value="3">銅</option>
+                                <option value="4">鉄</option>
+                                <option value="5">ダイヤ</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">
+                            <select class="olympic-select" name="olympic-select-1" id="olympic-select-1">
+                                <option value="0">なし</option>
+                                <option value="1">ピン</option>
+                                <option value="1">ポン</option>
+                                <option value="1">パン</option>
+                            </select>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr class="table-player1">
+                        <td><button class="patt-fluctuation fluctuation-patt-plus">+</button></td>
+                        <td><input type="text" class="hole-text hole-patt" id="patt-menber-1" value="2"></td>
+                        <td><button class="patt-fluctuation fluctuation-patt-minus">-</button></td>
+                    </tr>
+                </div>
             </table>
 
             <!-- ------------------------------------------------------------------- -->
@@ -263,28 +248,29 @@
             </div>
         </div>
 
+        <script src="./js/golf.js"></script>
         <script>
-            $(function () {
-                scoreStart();
-            });
+            // $(function () {
+            //     scoreStart();
+            // });
 
-            function scoreStart() {
-                $('.menu').hide();
-                $('.score-hole').show();
-                $('.hole-1').show();
-            }
+            // function scoreStart() {
+            //     $('.menu').hide();
+            //     $('.score-hole').show();
+            //     $('.hole-1').show();
+            // }
 
-            $('.score-fluctuation-plus').click(function () {
-                var score = $(this).parent().parent().find('.hole-score').val();
-                $(this).parent().parent().find('.hole-score').val(Number(score) + 1);
-            });
+            // $('.fluctuation-plus').click(function () {
+            //     var score = $(this).parent().parent().find('.hole-score').val();
+            //     $(this).parent().parent().find('.hole-score').val(Number(score) + 1);
+            // });
 
-            $('.score-fluctuation-minus').click(function () {
-                var score = $(this).parent().parent().find('.hole-score').val();
-                if (score > 1) {
-                    $(this).parent().parent().find('.hole-score').val(Number(score) - 1);
-                }
-            });
+            // $('.fluctuation-minus').click(function () {
+            //     var score = $(this).parent().parent().find('.hole-score').val();
+            //     if (score > 1) {
+            //         $(this).parent().parent().find('.hole-score').val(Number(score) - 1);
+            //     }
+            // });
         </script>
 </body>
 
