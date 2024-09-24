@@ -38,3 +38,20 @@ $('.fluctuation-patt-minus').click(function () {
         $(this).parent().parent().find('.hole-patt').val(patt - 1);
     }
 });
+
+$('.olympic-select').change(function() {
+    var collar = $(this).val();
+    if (collar == 0) {
+        $(this).css('background','none');
+    } else if (collar == 1) {
+        $(this).css('background','#ffd700');
+    } else if (collar == 2) {
+        $(this).css('background','#c0c0c0');
+    } else if (collar == 3) {
+        $(this).css('background','#cd7f32');
+    } else if (collar == 4) {
+        $(this).css('background','#808080');
+    } else if (collar == 5) {
+        $(this).css('background','#bcaec');
+    } 
+});

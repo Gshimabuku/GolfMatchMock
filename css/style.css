@@ -62,6 +62,13 @@ html {
     transform: rotate(45deg);
 }
 
+.olympic-select {
+    appearance: none;
+    padding: 3px;
+    text-align: center;
+    border:skyblue 2px inset;
+}
+
 .member {
     margin: 10px;
 }
@@ -114,7 +121,7 @@ h2 {
 .hole-change {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 5px;
 }
 
 .hole-column {
@@ -148,9 +155,10 @@ h2 {
 .hole {
     Text-align: center;
 }
+
 .hole-text {
     font-size: 20px;
-    width: 20px;
+    width: 15px;
 }
 
 .score-fluctuation {
