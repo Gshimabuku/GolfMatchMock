@@ -34,7 +34,7 @@ $('.fluctuation-patt-plus').click(function () {
 
 $('.fluctuation-patt-minus').click(function () {
     var patt = Number($(this).parent().parent().find('.hole-patt').val());
-    if (patt > 1) {
+    if (patt > 0) {
         $(this).parent().parent().find('.hole-patt').val(patt - 1);
     }
 });
