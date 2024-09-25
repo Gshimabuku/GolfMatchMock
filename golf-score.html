@@ -77,6 +77,11 @@
                 <button class="hole-button" value="17">17</button>
                 <button class="hole-button" value="18">18</button>
             </div>
+            <div class="hole-around">
+                <button class="hole-around-change" value=""><img class="hole-around-img" src="./img/hole_back.png" alt=""></button>
+                <button class="hole-now"></button>
+                <button class="hole-around-change" value=""><img class="hole-around-img" src="./img/hole_next.png" alt=""></button>
+            </div>
         </div>
 
 
@@ -91,36 +96,64 @@
                     <th>スコア<br>パット</th>
                     <th></th>
                     <th>オリ</th>
-                    <th>PPP</th>
+                    <th>ヘビ<button class="snake-back" value=""><img class="snake-back-img" src="./img/hole_back.png" alt=""></button></th>
                 </tr>
                 <!-- Player1 -->
-                <div>
+                <div class="player1">
                     <tr class="table-player1">
                         <td rowspan="2"><label class="name1">Player1</label></td>
-                        <td><button class="score-fluctuation fluctuation-score-plus">+</button></td>
-                        <td><input type="text" class="hole-text hole-score" id="score-menber-1" value="4"></td>
-                        <td><button class="score-fluctuation fluctuation-score-minus">-</button></td>
+                        <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-1">+</button></td>
+                        <td><input type="text" class="hole-text hole-score" id="score-member-1-1" value="4"></td>
+                        <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-1">-</button></td>
                         <td rowspan="2">
-                            <select class="olympic-select" name="olympic-select-1" id="olympic-select-1">
-                                <option value="0">なし</option>
-                                <option value="1">金</option>
-                                <option value="2">銀</option>
-                                <option value="3">銅</option>
-                                <option value="4">鉄</option>
-                                <option value="5">ダイヤ</option>
+                            <select class="olympic-select" name="olympic-select-1-1" id="olympic-select-1-1">
+                                <option value="0" style="background: #ffffff;"> - </option>
+                                <option value="1" style="background: #ffd700;">金</option>
+                                <option value="2" style="background: #d6d6d6;">銀</option>
+                                <option value="3" style="background: #cd7f32">銅</option>
+                                <option value="4" style="background: #86918f">鉄</option>
+                                <option value="5" style="background: #b9f2ff">ダイヤ</option>
                             </select>
                         </td>
                         <td rowspan="2">
-                            <input class="ppp-checkbox" type="checkbox">
-                            <input class="ppp-checkbox" type="checkbox">
-                            <input class="ppp-checkbox" type="checkbox">
+                            <label class="snake-score snake-1" id="snake-1-1" for="">0</label>
+                            <button class="snake-fluctuation snake-plus" value="snake-1-1">+</button>
                         </td>
                         <td rowspan="2"></td>
                     </tr>
                     <tr class="table-player1">
-                        <td><button class="patt-fluctuation fluctuation-patt-plus">+</button></td>
-                        <td><input type="text" class="hole-text hole-patt" id="patt-menber-1" value="2"></td>
-                        <td><button class="patt-fluctuation fluctuation-patt-minus">-</button></td>
+                        <td><button class="patt-fluctuation fluctuation-patt-plus" value="member-1-1">+</button></td>
+                        <td><input type="text" class="hole-text hole-patt" id="patt-member-1-1" value="2"></td>
+                        <td><button class="patt-fluctuation fluctuation-patt-minus" value="member-1-1">-</button></td>
+                    </tr>
+                </div>
+                <!-- Player2 -->
+                <div class="player2">
+                    <tr class="table-player2">
+                        <td rowspan="2"><label class="name2">Player2</label></td>
+                        <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-2">+</button></td>
+                        <td><input type="text" class="hole-text hole-score" id="score-member-1-2" value="4"></td>
+                        <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-2">-</button></td>
+                        <td rowspan="2">
+                            <select class="olympic-select" name="olympic-select-1-2" id="olympic-select-1-2">
+                                <option value="0" style="background: #ffffff;"> - </option>
+                                <option value="1" style="background: #ffd700;">金</option>
+                                <option value="2" style="background: #d6d6d6;">銀</option>
+                                <option value="3" style="background: #cd7f32">銅</option>
+                                <option value="4" style="background: #86918f">鉄</option>
+                                <option value="5" style="background: #b9f2ff">ダイヤ</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">
+                            <label class="snake-score snake-2" id="snake-1-2" for="">0</label>
+                            <button class="snake-fluctuation snake-plus" value="snake-1-2">+</button>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr class="table-player2">
+                        <td><button class="patt-fluctuation fluctuation-patt-plus" value="member-1-2">+</button></td>
+                        <td><input type="text" class="hole-text hole-patt" id="patt-member-1-2" value="2"></td>
+                        <td><button class="patt-fluctuation fluctuation-patt-minus" value="member-1-2">-</button></td>
                     </tr>
                 </div>
             </table>

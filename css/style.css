@@ -145,11 +145,34 @@ h2 {
 }
 
 .hole-button:hover {
-    background-color: #e0a800;
+    background-color: #03a500;
 }
 
 .hole-button:active {
-    background-color: #d39e00;
+    background-color: #03a500;
+}
+
+.hole-now {
+    background-color: #00ff00;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.hole-around {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hole-around-change {
+    background-color: transparent;
+    padding: 0;
+}
+
+.hole-around-img {
+    width: 30px;
+    height: 30px;
 }
 
 .hole {
@@ -173,6 +196,22 @@ h2 {
 }
 
 .patt-fluctuation {
+    background-color: #ffaa00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.snake-back-img {
+    width: 10px;
+    height: 10px;
+}
+
+.snake-fluctuation {
     background-color: #ffaa00;
     color: white;
     border: none;
