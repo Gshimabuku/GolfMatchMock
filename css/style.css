@@ -62,11 +62,11 @@ html {
     transform: rotate(45deg);
 }
 
-.olympic-select {
+.select-box {
     appearance: none;
-    padding: 3px;
+    padding: 5px;
     text-align: center;
-    border:skyblue 2px inset;
+    border: skyblue 2px inset;
 }
 
 .member {
@@ -89,6 +89,11 @@ h1 {
 
 h2 {
     color: #333;
+}
+
+button {
+    justify-content: center;
+    align-items: center;
 }
 
 .boxes {
@@ -124,8 +129,13 @@ h2 {
     padding: 5px;
 }
 
-.hole-column {
+.hole-flex {
     display: flex;
+}
+
+.hole-center {
+    text-align: center;
+    align-items: center;     /* 垂直方向の中央揃え */
 }
 
 .hole-button {
@@ -153,15 +163,16 @@ h2 {
 }
 
 .hole-now {
+    border: 2px solid #000000;
     background-color: #00ff00;
     color: rgb(0, 0, 0);
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    padding: 0;
 }
 
 .hole-around {
-    text-align: center;
     margin-top: 10px;
 }
 
@@ -185,41 +196,46 @@ h2 {
 }
 
 .score-fluctuation {
+    border: 2px solid #000000;
     background-color: #00aaff;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     width: 20px;
     height: 25px;
-    font-size: 16px;
-    font-weight: bold;
 }
 
-.patt-fluctuation {
+.putt-fluctuation {
+    border: 2px solid #000000;
     background-color: #ffaa00;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     width: 20px;
     height: 25px;
-    font-size: 16px;
-    font-weight: bold;
+}
+
+.snake-back {
+    background-color: transparent;
 }
 
 .snake-back-img {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.snake-score {
+    padding: 0 5px;
 }
 
 .snake-fluctuation {
-    background-color: #ffaa00;
-    color: white;
+    border: 2px solid #000000;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     width: 20px;
     height: 25px;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 table {
@@ -228,5 +244,5 @@ table {
 
 td,
 th {
-    padding: 3px;
+    padding: 7px;
 }

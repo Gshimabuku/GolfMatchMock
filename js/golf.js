@@ -20,50 +20,50 @@ $('.fluctuation-score-plus').click(function () {
 $('.fluctuation-score-minus').click(function () {
     var member = $(this).val();
     var score = Number($('#score-' + member).val());
-    var patt = Number($('#patt-' + member).val());
+    var putt = Number($('#putt-' + member).val());
     if (score > 1) {
-        if (score - 1 == patt) {
+        if (score - 1 == putt) {
             var member = $(this).val();
-            $('#patt-' + member).val(patt - 1);
+            $('#putt-' + member).val(putt - 1);
         }
         $('#score-' + member).val(score - 1);
     }
 });
 
-$('.fluctuation-patt-plus').click(function () {
+$('.fluctuation-putt-plus').click(function () {
     var member = $(this).val();
-    var patt = Number($('#patt-' + member).val());
+    var putt = Number($('#putt-' + member).val());
     var score = Number($('#score-' + member).val());
-    if (patt + 1 < score) {
-        $('#patt-' + member).val(patt + 1);
+    if (putt + 1 < score) {
+        $('#putt-' + member).val(putt + 1);
     }
 });
 
-$('.fluctuation-patt-minus').click(function () {
+$('.fluctuation-putt-minus').click(function () {
     var member = $(this).val();
-    var patt = Number($('#patt-' + member).val());
-    if (patt > 0) {
-        $('#patt-' + member).val(patt - 1);
+    var putt = Number($('#putt-' + member).val());
+    if (putt > 0) {
+        $('#putt-' + member).val(putt - 1);
     }
 });
 
 // オリンピック選択時の色変更
-$('.olympic-select').change(function() {
-    var collar = $(this).val();
-    if (collar == 0) {
-        $(this).css('background','#ffffff');
-    } else if (collar == 1) {
-        $(this).css('background','#ffd700');
-    } else if (collar == 2) {
-        $(this).css('background','#d6d6d6');
-    } else if (collar == 3) {
-        $(this).css('background','#cd7f32');
-    } else if (collar == 4) {
-        $(this).css('background','#86918f');
-    } else if (collar == 5) {
-        $(this).css('background','#b9f2ff');
-    } 
-});
+// $('.olympic-select').change(function() {
+//     var collar = $(this).val();
+//     if (collar == 0) {
+//         $(this).css('background','#ffffff');
+//     } else if (collar == 1) {
+//         $(this).css('background','#ffd700');
+//     } else if (collar == 2) {
+//         $(this).css('background','#d6d6d6');
+//     } else if (collar == 3) {
+//         $(this).css('background','#cd7f32');
+//     } else if (collar == 4) {
+//         $(this).css('background','#86918f');
+//     } else if (collar == 5) {
+//         $(this).css('background','#b9f2ff');
+//     } 
+// });
 
 $('.snake-plus').click(function() {
     $('.snake-score').css('color', 'black');
@@ -82,3 +82,28 @@ $('.snake-back').click(function() {
     $('#' + nowLastPlayer).css('color', 'red');
     $('#' + backPlayer).text(backPlayerScore - 1);
 });
+
+$('.hole-button').click(function() {
+    var hole = $(this).val();
+    holeChange(hole);
+});
+
+$('#hole-back').click(function() {
+    var hole = Number($('#hole-now').text());
+    if (hole > 1) {
+        holeChange(hole - 1);
+    }
+});
+
+$('#hole-next').click(function() {
+    var hole = Number($('#hole-now').text());
+    if (hole < 18) {
+        holeChange(hole + 1);
+    }
+});
+
+function holeChange(holeNumber) {
+    $('.hole').hide();
+    $('.hole-' + holeNumber).show();
+    $('#hole-now').text(holeNumber);
+}
