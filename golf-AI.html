@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴルフスコア計算アプリ</title>
+    <link rel="stylesheet" href="./css/ai-styles.css">
+</head>
+<body>
+    <h1>ゴルフスコア計算アプリ</h1>
+    <form id="scoreForm">
+        <div id="holes">
+            <!-- 18ホール分の入力フィールドを生成 -->
+            <script>
+                for (let i = 1; i <= 18; i++) {
+                    document.write(`
+                        <div class="hole">
+                            <h3>ホール ${i}</h3>
+                            <label for="stroke${i}">ストローク:</label>
+                            <input type="number" id="stroke${i}" name="stroke${i}" required>
+                            <label for="putt${i}">パット:</label>
+                            <input type="number" id="putt${i}" name="putt${i}" required>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+        <button type="button" onclick="calculateScores()">計算</button>
+    </form>
+    <div id="result"></div>
+    <script src="./js/ai-golf.js"></script>
+</body>
+</html>
