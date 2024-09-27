@@ -65,6 +65,9 @@ $('.fluctuation-putt-minus').click(function () {
 //     } 
 // });
 
+/**
+ * ゲーム処理　ヘビ
+ */
 $('.snake-plus').click(function() {
     $('.snake-score').css('color', 'black');
     $(this).parent().find('.snake-score').css('color', 'red');
@@ -72,8 +75,14 @@ $('.snake-plus').click(function() {
     snake.push(player);
     var snakeScore = Number($(this).parent().find('.snake-score').text());
     $(this).parent().find('.snake-score').text(snakeScore + 1);
+    // 現在のプレイヤー変更
+    var playerName = $(this).parent().parent().find('.player-name').text();
+    $('.snake-now-player').text(playerName);
+    var total = Number($('.snake-now-total').text());
+    $('.snake-now-total').text(total + 1);
 });
 
+// 1つ戻す
 $('.snake-back').click(function() {
     var backPlayer = snake.pop();
     var backPlayerScore = $('#' + backPlayer).text();
@@ -81,8 +90,20 @@ $('.snake-back').click(function() {
     $('.snake-score').css('color', 'black');
     $('#' + nowLastPlayer).css('color', 'red');
     $('#' + backPlayer).text(backPlayerScore - 1);
+    // 現在のプレイヤー変更
+    var playerName = $('#' + nowLastPlayer).parent().parent().find('.player-name').text();
+    $('.snake-now-player').text(playerName);
+    var total = Number($('.snake-now-total').text());
+    if (total > 0) {
+        $('.snake-now-total').text(total - 1);
+    }
+    if (total <= 1) {
+        $('.snake-now-player').text('なし');
+    }
 });
 
+
+//
 $('.hole-button').click(function() {
     var hole = $(this).val();
     holeChange(hole);

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="menu">
+    <div class="menu" style="display: none;">
         <div class="member-all">
             <div class="member">
                 <p>メンバー1</p>
@@ -53,7 +53,7 @@
         <button class="menu-start-button" onclick="scoreStart();">スタート</button>
     </div>
 
-    <div class="score-hole" style="display: none;">
+    <div class="score-hole">
         <div class="hole-change">
             <div class="hole-flex">
                 <button class="hole-button" value="1">1</button>
@@ -84,11 +84,10 @@
             </div>
         </div>
 
-
         <!-- ------------------------------------------------------------------- -->
         <!-- HOLE1 -->
         <!-- ------------------------------------------------------------------- -->
-        <div class="hole hole-1" style="display: none;">
+        <div class="hole hole-1">
             <div class="hole-center">
                 <select class="select-box par-select" name="par-select-1" id="par-select-1">
                     <option value="3">パー3</option>
@@ -96,6 +95,7 @@
                     <option value="5">パー5</option>
                 </select>
             </div>
+
             <table>
                 <tr>
                     <th>名前</th>
@@ -106,7 +106,7 @@
                 <!-- Player1 -->
                 <div class="player1">
                     <tr class="table-player1">
-                        <td rowspan="2"><label class="name1">Player1</label></td>
+                        <td rowspan="2"><label class="player-name name1">Player1</label></td>
                         <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-1">-</button></td>
                         <td><input type="text" class="hole-text hole-score" id="score-member-1-1" value="4"></td>
                         <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-1">+</button></td>
@@ -135,7 +135,7 @@
                 <!-- Player2 -->
                 <div class="player2">
                     <tr class="table-player2">
-                        <td rowspan="2"><label class="name2">Player2</label></td>
+                        <td rowspan="2"><label class="player-name name2">Player2</label></td>
                         <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-2">-</button></td>
                         <td><input type="text" class="hole-text hole-score" id="score-member-1-2" value="4"></td>
                         <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-2">+</button></td>
@@ -161,7 +161,96 @@
                         <td><button class="putt-fluctuation fluctuation-putt-plus" value="member-1-2">+</button></td>
                     </tr>
                 </div>
+                <!-- Player3 -->
+                <div class="player3">
+                    <tr class="table-player3">
+                        <td rowspan="2"><label class="player-name name3">Player3</label></td>
+                        <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-3">-</button></td>
+                        <td><input type="text" class="hole-text hole-score" id="score-member-1-3" value="4"></td>
+                        <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-3">+</button></td>
+                        <td rowspan="2">
+                            <select class="select-box olympic-select" name="olympic-select-1-3" id="olympic-select-1-3">
+                                <option value="0"> - </option>
+                                <option value="1">金</option>
+                                <option value="2">銀</option>
+                                <option value="3">銅</option>
+                                <option value="4">鉄</option>
+                                <option value="5">ダイヤ</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">
+                            <label class="snake-score snake-3" id="snake-1-3" for="">0</label>
+                            <button class="snake-fluctuation snake-plus" value="snake-1-3">+</button>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr class="table-player2">
+                        <td><button class="putt-fluctuation fluctuation-putt-minus" value="member-1-3">-</button></td>
+                        <td><input type="text" class="hole-text hole-putt" id="putt-member-1-3" value="2"></td>
+                        <td><button class="putt-fluctuation fluctuation-putt-plus" value="member-1-3">+</button></td>
+                    </tr>
+                </div>
+                <!-- Player4 -->
+                <div class="player4">
+                    <tr class="table-player4">
+                        <td rowspan="2"><label class="player-name name4">Player4</label></td>
+                        <td><button class="score-fluctuation fluctuation-score-minus" value="member-1-4">-</button></td>
+                        <td><input type="text" class="hole-text hole-score" id="score-member-1-4" value="4"></td>
+                        <td><button class="score-fluctuation fluctuation-score-plus" value="member-1-4">+</button></td>
+                        <td rowspan="2">
+                            <select class="select-box olympic-select" name="olympic-select-1-4" id="olympic-select-1-4">
+                                <option value="0"> - </option>
+                                <option value="1">金</option>
+                                <option value="2">銀</option>
+                                <option value="3">銅</option>
+                                <option value="4">鉄</option>
+                                <option value="5">ダイヤ</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">
+                            <label class="snake-score snake-4" id="snake-1-4" for="">0</label>
+                            <button class="snake-fluctuation snake-plus" value="snake-1-4">+</button>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr class="table-player2">
+                        <td><button class="putt-fluctuation fluctuation-putt-minus" value="member-1-4">-</button></td>
+                        <td><input type="text" class="hole-text hole-putt" id="putt-member-1-4" value="2"></td>
+                        <td><button class="putt-fluctuation fluctuation-putt-plus" value="member-1-4">+</button></td>
+                    </tr>
+                </div>
             </table>
+
+            <div class="ppp hole-around hole-center" id="ppp-1">
+                <h2>ピン・ポン・パン</h2>
+                <select class="select-box pin-player-select" name="pin-player-select-1" id="pin-player-select-1">
+                    <option value="0"> - </option>
+                    <option value="1">Player1</option>
+                    <option value="2">Player2</option>
+                    <option value="3">Player3</option>
+                    <option value="4">Player4</option>
+                </select>
+                <select class="select-box pon-player-select" name="pon-player-select-1" id="pon-player-select-1">
+                    <option value="0"> - </option>
+                    <option value="1">Player1</option>
+                    <option value="2">Player2</option>
+                    <option value="3">Player3</option>
+                    <option value="4">Player4</option>
+                </select>
+                <select class="select-box pan-player-select" name="pan-player-select-1" id="pan-player-select-1">
+                    <option value="0"> - </option>
+                    <option value="1">Player1</option>
+                    <option value="2">Player2</option>
+                    <option value="3">Player3</option>
+                    <option value="4">Player4</option>
+                </select>
+            </div>
+
+            <div class="snake-total hole-around hole-center" id="snake-total-1">
+                <h2>ヘビ（雪だるま）</h2>
+                <label class="snake-now-player" id="snake-now-player-1" for="">なし</label>：
+                <label class="snake-now-total" id="snake-now-total-1" for="">0</label>
+            </div>
         </div>
         <!-- ------------------------------------------------------------------- -->
         <!-- HOLE2 -->
