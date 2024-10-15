@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GolfMatch - </title>
+
+    <!-- {{-- CSS --}} -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- {{-- JS --}} -->
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.14.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.touch-punch-0.2.3.min.js"></script>
+    <script type="text/javascript" src="../js/golf_match.js"></script>
+    <script type="text/javascript" src="../js/golf_match_ajax.js"></script>
+</head>
+
+<body>
+    <div id="login-container">
+        <h1>ログイン</h1>
+        <form id="golf-form">
+            <!-- {{ csrf_field() }} -->
+            <div class="form-group">
+                <label for="login_id">ログインID</label>
+                <input type="text" id="login_id" name="login_id" required>
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="form-btn">ログイン</button>
+        </form>
+    </div>
+
+    <script>
+        /**
+         * submit実行
+         */
+        function submitContents(url) {
+            $('#golf-form').attr('method', 'GET');
+            $('#golf-form').attr('action', url);
+            $('#golf-form').submit();
+        }
+
+        /** ログイン */
+        function login() {
+            $(location).attr('login_id')
+            $('.form-btn').on('click', function () {
+                if ($('#login_id').val() == 'staff') {
+                    submitContents('./01_00_01_Staff - ホーム画面.html');
+                } else {
+                    submitContents('./02_00_01_Distributor - ホーム画面.html');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
