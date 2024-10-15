@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GolfMatch - </title>
+    <title>GolfMatch - 新規登録</title>
 
     <!-- {{-- CSS --}} -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -21,23 +21,27 @@
 </head>
 
 <body>
-    <div id="login-container">
-        <h1>ログイン</h1>
-        <form id="golf-form">
-            <!-- {{ csrf_field() }} -->
-            <div class="form-group">
-                <label for="login_id">ログインID</label>
-                <input type="text" id="login_id" name="login_id" required>
+    <div id="container">
+        <div id="auth-container">
+            <div class="change-auth">
+                <h1 class="change-auth-left">ログイン</h1>
+                <h3 class="change-auth-right change-auth-select"><a href="./00_00_02_新規登録画面.html" class="change-auth-a">新規登録</a></h3>
             </div>
-            <div class="form-group">
-                <label for="password">パスワード</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="form-btn">ログイン</button>
-            <a href="./00_00_02_新規登録画面.html">新規登録画面</a><br>
-            <a href="./01_00_01_Staff - ホーム画面.html">Staff HOME</a><br>
-            <a href="./02_00_01_Distributor - ホーム画面.html">Distributor HOME</a>
-        </form>
+            <form>
+                <!-- {{ csrf_field() }} -->
+                <div class="form-group">
+                    <label for="login_id">ログインID</label>
+                    <input type="text" id="login_id" name="login_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">パスワード</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">ログイン</button>
+                <a href="./01_00_01_Staff - ホーム画面.html">Staff HOME</a>
+                <a href="./02_00_01_Distributor - ホーム画面.html" style="float: right">Distributor HOME</a>
+            </form>
+        </div>
     </div>
 </body>
 

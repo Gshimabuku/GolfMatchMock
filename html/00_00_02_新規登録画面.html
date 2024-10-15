@@ -21,29 +21,42 @@
 </head>
 
 <body>
-    <div id="login-container">
-        <h1>新規登録</h1>
-        <form method="GET" action="./00_00_01_ログイン画面.html">
-            <!-- {{ csrf_field() }} -->
-            <div class="form-group">
-                <label for="login_id">ログインID</label>
-                <input type="text" id="login_id" name="login_id" required>
+    <div id="container">
+        <div id="auth-container">
+            <div class="change-auth">
+                <h3 class="change-auth-left change-auth-select"><a href="./00_00_01_ログイン画面.html" class="change-auth-a">ログイン</a></h3>
+                <h1 class="change-auth-right">新規登録</a></h1>
             </div>
-            <div class="form-group">
-                <label for="user_name">ユーザー名</label>
-                <input type="text" id="user_name" name="user_name" required>
-            </div>
-            <div class="form-group">
-                <label for="password">パスワード</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="check">パスワード確認</label>
-                <input type="password" id="check" name="check" required>
-            </div>
-            <button type="submit">新規登録</button>
-            <a href="./00_00_01_ログイン画面.html">ログイン画面</a><br>
-        </form>
+            <form>
+                <!-- {{ csrf_field() }} -->
+                <div class="form-group">
+                    <label for="login_id">ログインID</label>
+                    <!-- @error('login_id')
+                        <label class="error">{{ $message }}</label>
+                    @enderror -->
+                    <input type="text" id="login_id" name="login_id" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="user_name">ユーザー名</label>
+                    <!-- @error('user_name')
+                        <label class="error">{{ $message }}</label>
+                    @enderror -->
+                    <input type="text" id="user_name" name="user_name" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">パスワード</label>
+                    <!-- @error('password')
+                        <label class="error">{{ $message }}</label>
+                    @enderror -->
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password_confirmation">パスワード確認</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" required>
+                </div>
+                <button type="submit" class="register-btn">新規登録</button>
+            </form>
+        </div>
     </div>
 </body>
 

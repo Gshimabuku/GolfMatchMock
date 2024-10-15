@@ -21,9 +21,38 @@
 </head>
 
 <body>
-    <div id="login-container">
-        <h1></h1>
+    <header>
+        <div id="icon-hamburger"><span></span></div>
+        <nav id="header-container">
+            <ul id="hamburger-menu">
+                <li class="hamburger-menu-item"><a href="#">ホーム</a></li>
+                <li class="hamburger-menu-item"><a href="#">ページ A</a></li>
+                <li class="hamburger-menu-item"><a href="#">ページ B</a></li>
+                <li class="hamburger-menu-item"><a href="#">ページ C</a></li>
+                <li class="hamburger-menu-item"><a href="#">ページ D</a></li>
+                <li class="hamburger-menu-item"><a href="#">ページ E</a></li>
+            </ul>
+        </nav>
+        <div id="popup-bg-cover"></div>
+    </header>
+
+    <div id="container">
+        <div id="auth-container">
+            <h1>Distributor 過去ラウンド詳細</h1>
+        </div>
     </div>
+
+    <script>
+        $(function () {
+            $('#icon-hamburger').on('click', function () {
+                if ($('#header-container #hamburger-menu').css('display') === 'block') {
+                    $('#header-container #hamburger-menu').slideUp('1500');
+                } else {
+                    $('#header-container #hamburger-menu').slideDown('1500');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
