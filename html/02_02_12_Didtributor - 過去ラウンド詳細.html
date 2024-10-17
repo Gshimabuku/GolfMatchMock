@@ -8,11 +8,9 @@
     <title>GolfMatch - </title>
 
     <!-- {{-- CSS --}} -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- {{-- JS --}} -->
-    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery-ui-1.14.0.min.js"></script>
     <script type="text/javascript" src="../js/jquery.ui.touch-punch-0.2.3.min.js"></script>
@@ -21,8 +19,27 @@
 </head>
 
 <body>
-    <div id="login-container">
-        <h1>過去ラウンド詳細</h1>
+    <header>
+        <div class="header-menu">
+            <div class="icon-hamburger"><span></span></div><button class="logouut" onclick="location.href='./00_00_01_ログイン画面.html'"><img src="../image/logout.png" alt=""><br><span class="logout-text">LOGOUT</span></button>
+        </div>
+        <nav class="header-container">
+            <ul class="hamburger-menu staff-menu">
+                <li class="hamburger-menu-item"><a href="./02_00_01_Distributor - ホーム画面.html">ホーム</a></li>
+                <li class="hamburger-menu-item"><a href="./02_01_01_Didtributor - プロフィール詳細.html">プロフィール</a></li>
+                <li class="hamburger-menu-item"><a href="./02_02_01_Didtributor - ラウンド設定.html">ラウンド登録</a></li>
+                <li class="hamburger-menu-item"><a href="./02_02_11_Didtributor - 過去ラウンド一覧.html">過去ラウンド</a></li>
+                <li class="hamburger-menu-item"><a href="./02_03_01_Didtributor - お知らせ一覧.html">お知らせ一覧</a></li>
+                <li class="hamburger-menu-item"><a href="./02_04_01_Didtributor - ランキング.html">ランキング</a></li>
+            </ul>
+        </nav>
+        <div id="popup-bg-cover"></div>
+    </header>
+
+    <div id="container">
+        <div id="auth-container">
+            <h1>Distributor 過去ラウンド詳細</h1>
+        </div>
     </div>
 </body>
 
