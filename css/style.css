@@ -340,12 +340,20 @@ header {
 .ranking-container {
     .ranking-item {
         margin-bottom: 20px;
+        overflow: auto;
+    }
+
+    .ranking-top-title {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
     }
 
     .ranking-table {
-        width: 100%;
         border-collapse: separate;
         border-spacing: 0;
+
+        
 
         th:first-child {
             border-radius: 5px 0 0 0;
@@ -364,7 +372,8 @@ header {
             border-top: 1px solid #3c6690;
             border-bottom: 1px solid #3c6690;
             box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
-            padding: 10px 0;
+            padding: 10px 10px;
+            white-space: nowrap;
         }
 
         td {
@@ -387,5 +396,28 @@ header {
         tr:last-child td:last-child {
             border-radius: 0 0 5px 0;
         }
+    }
+
+    .ranking-top-table {
+        width: 100%;
+    }
+
+    .ranking-all-table {
+        width: none;
+    }
+
+    .ranking-all-link {
+        font-size: 70%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .ranking-detal-link-right {
+        text-align: right;
+    }
+
+    .ranking-detal-link {
+        font-size: 70%;
     }
 }
